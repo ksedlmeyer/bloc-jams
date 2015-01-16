@@ -1,4 +1,4 @@
-{ 
+{
   "author": "Bloc",
   "name": "bloc-rdio-skeleton",
   "description": "Starter skeleton for Bloc's Rdio project.",
@@ -25,7 +25,7 @@
     "jade": "1.3",
     "sass-brunch": "1.8.0",
     "clean-css-brunch": "1.5",
-    "coffeelint-brunch": "1.7",
+    "coffeelint-brunch": "1.5",
     "ugly-blanket-brunch": "~1.5.3",
     "async": "0.2",
     "socket.io": "0.9",
@@ -44,7 +44,7 @@
     "express-namespace": "*",
     "passport-local": "*",
     "passport": "*",
-    "bower": "1.3.12"
+    "bower": "1.3.8"
   },
   
   "devDependencies": {

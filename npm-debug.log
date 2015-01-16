@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '--no-bin-links' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink /usr/bin/node
@@ -53,117 +53,67 @@
 11 warn package.json ansi-color@0.2.1 'repositories' (plural) Not supported. Please pick one as the 'repository' field
 12 warn package.json express-resource@1.0.0 No repository field.
 13 verbose readDependencies using package.json deps
-14 verbose already installed skipping mocha@* /vagrant/bloc-jams
-15 verbose already installed skipping chai@* /vagrant/bloc-jams
-16 verbose already installed skipping sinon@* /vagrant/bloc-jams
-17 verbose already installed skipping sinon-chai@* /vagrant/bloc-jams
-18 verbose already installed skipping supertest@* /vagrant/bloc-jams
-19 verbose already installed skipping blanket@* /vagrant/bloc-jams
-20 verbose already installed skipping auto-reload-brunch@1.7 /vagrant/bloc-jams
-21 verbose already installed skipping karma@~0.12.16 /vagrant/bloc-jams
-22 verbose already installed skipping karma-ng-scenario@~0.1.0 /vagrant/bloc-jams
-23 verbose already installed skipping karma-mocha@~0.1.3 /vagrant/bloc-jams
-24 verbose already installed skipping karma-chrome-launcher@~0.1.4 /vagrant/bloc-jams
-25 verbose already installed skipping karma-growl-reporter@~0.1.1 /vagrant/bloc-jams
-26 verbose already installed skipping karma-chai@~0.1.0 /vagrant/bloc-jams
-27 verbose already installed skipping karma-requirejs@~0.2.2 /vagrant/bloc-jams
-28 verbose already installed skipping brunch@1.7.13 /vagrant/bloc-jams
-29 verbose already installed skipping javascript-brunch@1.5 /vagrant/bloc-jams
-30 verbose already installed skipping coffee-script-brunch@1.5 /vagrant/bloc-jams
-31 verbose already installed skipping css-brunch@1.5 /vagrant/bloc-jams
-32 verbose already installed skipping stylus-brunch@1.5 /vagrant/bloc-jams
-33 verbose already installed skipping jade@1.3 /vagrant/bloc-jams
-34 verbose already installed skipping sass-brunch@1.8.0 /vagrant/bloc-jams
-35 verbose already installed skipping clean-css-brunch@1.5 /vagrant/bloc-jams
-36 verbose already installed skipping coffeelint-brunch@1.7 /vagrant/bloc-jams
-37 verbose already installed skipping ugly-blanket-brunch@~1.5.3 /vagrant/bloc-jams
-38 verbose already installed skipping async@0.2 /vagrant/bloc-jams
-39 verbose already installed skipping socket.io@0.9 /vagrant/bloc-jams
-40 verbose already installed skipping express@3.4 /vagrant/bloc-jams
-41 verbose already installed skipping debug@~0.7.2 /vagrant/bloc-jams
-42 verbose already installed skipping ansi-color@0.2 /vagrant/bloc-jams
-43 verbose already installed skipping date-utils@1.2 /vagrant/bloc-jams
-44 verbose already installed skipping cordell@* /vagrant/bloc-jams
-45 verbose already installed skipping growl@* /vagrant/bloc-jams
-46 verbose already installed skipping consolidate@* /vagrant/bloc-jams
-47 verbose already installed skipping ejs@* /vagrant/bloc-jams
-48 verbose already installed skipping mongoose@* /vagrant/bloc-jams
-49 verbose already installed skipping underscore@* /vagrant/bloc-jams
-50 verbose already installed skipping express-resource@* /vagrant/bloc-jams
-51 verbose already installed skipping express-namespace@* /vagrant/bloc-jams
-52 verbose already installed skipping passport-local@* /vagrant/bloc-jams
-53 verbose already installed skipping passport@* /vagrant/bloc-jams
-54 verbose already installed skipping bower@1.3.12 /vagrant/bloc-jams
+14 verbose already installed skipping css-brunch@1.5 /vagrant/bloc-jams
+15 verbose already installed skipping stylus-brunch@1.5 /vagrant/bloc-jams
+16 verbose already installed skipping jade@1.3 /vagrant/bloc-jams
+17 verbose already installed skipping sass-brunch@1.8.0 /vagrant/bloc-jams
+18 verbose already installed skipping clean-css-brunch@1.5 /vagrant/bloc-jams
+19 verbose already installed skipping coffeelint-brunch@1.5 /vagrant/bloc-jams
+20 verbose already installed skipping ugly-blanket-brunch@~1.5.3 /vagrant/bloc-jams
+21 verbose already installed skipping async@0.2 /vagrant/bloc-jams
+22 verbose already installed skipping socket.io@0.9 /vagrant/bloc-jams
+23 verbose already installed skipping express@3.4 /vagrant/bloc-jams
+24 verbose already installed skipping debug@~0.7.2 /vagrant/bloc-jams
+25 verbose already installed skipping ansi-color@0.2 /vagrant/bloc-jams
+26 verbose already installed skipping date-utils@1.2 /vagrant/bloc-jams
+27 verbose already installed skipping cordell@* /vagrant/bloc-jams
+28 verbose already installed skipping growl@* /vagrant/bloc-jams
+29 verbose already installed skipping consolidate@* /vagrant/bloc-jams
+30 verbose already installed skipping ejs@* /vagrant/bloc-jams
+31 verbose already installed skipping mongoose@* /vagrant/bloc-jams
+32 verbose already installed skipping underscore@* /vagrant/bloc-jams
+33 verbose already installed skipping express-resource@* /vagrant/bloc-jams
+34 verbose already installed skipping express-namespace@* /vagrant/bloc-jams
+35 verbose already installed skipping passport-local@* /vagrant/bloc-jams
+36 verbose already installed skipping passport@* /vagrant/bloc-jams
+37 verbose already installed skipping bower@1.3.3 /vagrant/bloc-jams
+38 verbose already installed skipping mocha@* /vagrant/bloc-jams
+39 verbose already installed skipping chai@* /vagrant/bloc-jams
+40 verbose already installed skipping sinon@* /vagrant/bloc-jams
+41 verbose already installed skipping sinon-chai@* /vagrant/bloc-jams
+42 verbose already installed skipping supertest@* /vagrant/bloc-jams
+43 verbose already installed skipping blanket@* /vagrant/bloc-jams
+44 verbose already installed skipping auto-reload-brunch@1.7 /vagrant/bloc-jams
+45 verbose already installed skipping karma@~0.12.16 /vagrant/bloc-jams
+46 verbose already installed skipping karma-ng-scenario@~0.1.0 /vagrant/bloc-jams
+47 verbose already installed skipping karma-mocha@~0.1.3 /vagrant/bloc-jams
+48 verbose already installed skipping karma-chrome-launcher@~0.1.4 /vagrant/bloc-jams
+49 verbose already installed skipping karma-growl-reporter@~0.1.1 /vagrant/bloc-jams
+50 verbose already installed skipping karma-chai@~0.1.0 /vagrant/bloc-jams
+51 verbose already installed skipping karma-requirejs@~0.2.2 /vagrant/bloc-jams
+52 verbose already installed skipping brunch@1.7.13 /vagrant/bloc-jams
+53 verbose already installed skipping javascript-brunch@1.5 /vagrant/bloc-jams
+54 verbose already installed skipping coffee-script-brunch@1.5 /vagrant/bloc-jams
 55 silly resolved []
 56 info build /vagrant/bloc-jams
-57 verbose linkStuff [ false, false, false, '/vagrant' ]
-58 info linkStuff bloc-rdio-skeleton@0.0.1
-59 verbose linkBins bloc-rdio-skeleton@0.0.1
-60 verbose linkMans bloc-rdio-skeleton@0.0.1
-61 verbose rebuildBundles bloc-rdio-skeleton@0.0.1
-62 verbose rebuildBundles [ 'ansi-color',
-62 verbose rebuildBundles   'async',
-62 verbose rebuildBundles   'auto-reload-brunch',
-62 verbose rebuildBundles   'blanket',
-62 verbose rebuildBundles   'bower',
-62 verbose rebuildBundles   'brunch',
-62 verbose rebuildBundles   'chai',
-62 verbose rebuildBundles   'clean-css-brunch',
-62 verbose rebuildBundles   'coffee-script-brunch',
-62 verbose rebuildBundles   'coffeelint-brunch',
-62 verbose rebuildBundles   'consolidate',
-62 verbose rebuildBundles   'cordell',
-62 verbose rebuildBundles   'css-brunch',
-62 verbose rebuildBundles   'date-utils',
-62 verbose rebuildBundles   'debug',
-62 verbose rebuildBundles   'ejs',
-62 verbose rebuildBundles   'express',
-62 verbose rebuildBundles   'express-namespace',
-62 verbose rebuildBundles   'express-resource',
-62 verbose rebuildBundles   'growl',
-62 verbose rebuildBundles   'jade',
-62 verbose rebuildBundles   'javascript-brunch',
-62 verbose rebuildBundles   'karma',
-62 verbose rebuildBundles   'karma-chai',
-62 verbose rebuildBundles   'karma-chrome-launcher',
-62 verbose rebuildBundles   'karma-growl-reporter',
-62 verbose rebuildBundles   'karma-mocha',
-62 verbose rebuildBundles   'karma-ng-scenario',
-62 verbose rebuildBundles   'karma-requirejs',
-62 verbose rebuildBundles   'mocha',
-62 verbose rebuildBundles   'mongoose',
-62 verbose rebuildBundles   'passport',
-62 verbose rebuildBundles   'passport-local',
-62 verbose rebuildBundles   'requirejs',
-62 verbose rebuildBundles   'sass-brunch',
-62 verbose rebuildBundles   'sinon',
-62 verbose rebuildBundles   'sinon-chai',
-62 verbose rebuildBundles   'socket.io',
-62 verbose rebuildBundles   'stylus-brunch',
-62 verbose rebuildBundles   'supertest',
-62 verbose rebuildBundles   'ugly-blanket-brunch',
-62 verbose rebuildBundles   'underscore' ]
-63 verbose rebuild bundle /vagrant/bloc-jams/node_modules/requirejs
-64 info build /vagrant/bloc-jams/node_modules/requirejs
-65 info preinstall requirejs@2.1.15
-66 verbose linkStuff [ false, false, false, '/vagrant/bloc-jams/node_modules' ]
-67 info linkStuff requirejs@2.1.15
-68 verbose linkBins requirejs@2.1.15
-69 verbose link bins [ { 'r.js': './bin/r.js' },
-69 verbose link bins   '/vagrant/bloc-jams/node_modules/.bin',
-69 verbose link bins   false ]
-70 verbose linkMans requirejs@2.1.15
-71 verbose rebuildBundles requirejs@2.1.15
-72 error Error: UNKNOWN, symlink '../requirejs/bin/r.js'
-73 error If you need help, you may report this *entire* log,
-73 error including the npm and node versions, at:
-73 error     <http://github.com/npm/npm/issues>
-74 error System Linux 3.2.0-23-generic-pae
-75 error command "/usr/bin/node" "/usr/bin/npm" "install"
-76 error cwd /vagrant/bloc-jams
-77 error node -v v0.10.33
-78 error npm -v 1.4.28
-79 error path ../requirejs/bin/r.js
-80 error code UNKNOWN
-81 error errno -1
-82 verbose exit [ -1, true ]
+57 info install bloc-rdio-skeleton@0.0.1
+58 info postinstall bloc-rdio-skeleton@0.0.1
+59 verbose unsafe-perm in lifecycle true
+60 info bloc-rdio-skeleton@0.0.1 Failed to exec postinstall script
+61 error bloc-rdio-skeleton@0.0.1 postinstall: `./node_modules/bower/bin/bower install`
+61 error Exit status 1
+62 error Failed at the bloc-rdio-skeleton@0.0.1 postinstall script.
+62 error This is most likely a problem with the bloc-rdio-skeleton package,
+62 error not with npm itself.
+62 error Tell the author that this fails on your system:
+62 error     ./node_modules/bower/bin/bower install
+62 error You can get their info via:
+62 error     npm owner ls bloc-rdio-skeleton
+62 error There is likely additional logging output above.
+63 error System Linux 3.2.0-23-generic-pae
+64 error command "/usr/bin/node" "/usr/bin/npm" "install" "--no-bin-links"
+65 error cwd /vagrant/bloc-jams
+66 error node -v v0.10.33
+67 error npm -v 1.4.28
+68 error code ELIFECYCLE
+69 verbose exit [ 1, true ]
