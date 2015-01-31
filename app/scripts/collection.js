@@ -10,6 +10,8 @@ var buildAlbumThumbnail = function() {
      + '      <br/>'
      + '      X songs'
      + '      <br/>'
+     + '      X:XX'
+     + '      <br/>'
      + '    </p>'
      + '  </div>'
      + '</div>';
