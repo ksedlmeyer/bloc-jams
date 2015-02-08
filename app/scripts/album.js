@@ -14,7 +14,7 @@ var albumPicasso = {
   ]
 };
 
-// Another Example Album
+// Another Example Albumpwd
 var albumMarconi = {
   name: 'The Telephone',
   artist: 'Guglielmo Marconi',
@@ -79,5 +79,6 @@ if (document.URL.match(/\/album.html/)) {
    $(document).ready(function() {
      
      changeAlbumView(albumPicasso);
+     changeAlbumView(albumMarconi);
    });
  }
