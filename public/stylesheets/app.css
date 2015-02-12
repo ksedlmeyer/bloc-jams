@@ -122,7 +122,7 @@ td.song-number {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 0;
+  height: 150px;
   background: rgba(255, 255, 255, 0.3);
   z-index: 100; }
   .player-bar a, .player-bar a:hover {
@@ -138,7 +138,7 @@ td.song-number {
     text-align: left; }
   .player-bar .right-controls {
     width: 25%;
-    text-align: left; }
+    text-align: right; }
   .player-bar .play-controls a {
     font-size: 20px;
     vertical-align: middle; }
