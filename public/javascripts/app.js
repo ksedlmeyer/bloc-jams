@@ -376,6 +376,11 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', function($scope
     return 'default';
    };
 
+   $scope.playSong = function(song) {
+    SongPlayer.setSong($scope.album, song);
+    SongPlayer.play();
+   };
+
    $scope.pauseSong = function(song) {
     SongPlayer.pause();
    };
@@ -419,21 +424,67 @@ blocJams.service('SongPlayer', function() {
       if (currentTrackIndex < 0) {
         currentTrackIndex = this.currentAlbum.songs.length - 1;
       }
+
       var song = this.currentAlbum.songs[currentTrackIndex];
       this.setSong(this.currentAlbum, song);
     },
     setSong: function(album, song) {
       if (currentSoundFile) {
-        currentSoundFile.stop();
+      currentSoundFile.stop();
       }
       this.currentAlbum = album;
       this.currentSong = song;
-      currentSoundFile = new buzz.sound(song.audioURL, {
-        formats: ["mp3"],
-        preload: true
+      currentSoundFile = new buzz.sound(song.audioUrl, {
+      formats: [ "mp3" ],
+      preload: true
       });
 
       this.play();
+    }
+  };
+});
+
+blocJams.directive('slider', function() {
+  var updateSeekPercentage = function($seekBar, event) {
+     var barWidth = $seekBar.width();
+     var offsetX =  event.pageX - $seekBar.offset().left;
+ 
+     var offsetXPercent = (offsetX  / $seekBar.width()) * 100;
+     offsetXPercent = Math.max(0, offsetXPercent);
+     offsetXPercent = Math.min(100, offsetXPercent);
+ 
+     var percentageString = offsetXPercent + '%';
+     $seekBar.find('.fill').width(percentageString);
+     $seekBar.find('.thumb').css({left: percentageString});
+   }
+
+  return {
+    templateUrl: '/templates/directives/slider.html',
+    replace: true,
+    restrict: 'E',
+    link: function(scope, element, attributes) {
+ 
+      var $seekBar = $(element);
+ 
+      $seekBar.click(function(event) {
+        updateSeekPercentage($seekBar, event);
+      });
+ 
+      $seekBar.find('.thumb').mousedown(function(event){
+        $seekBar.addClass('no-animate');
+ 
+        $(document).bind('mousemove.thumb', function(event){
+          updateSeekPercentage($seekBar, event);
+        });
+ 
+        //cleanup
+        $(document).bind('mouseup.thumb', function(){
+          $seekBar.removeClass('no-animate');
+          $(document).unbind('mousemove.thumb');
+          $(document).unbind('mouseup.thumb');
+        });
+ 
+      });
     }
   };
 });
